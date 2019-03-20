@@ -6,21 +6,26 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Blueprints</title>
+        <title>Cinemas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <script src="/webjars/jquery/jquery.min.js"></script>
         <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/apimock.js"></script>
+        <script src="js/app.js"></script>
         <link rel="stylesheet"
               href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
     </head>
     <body>
-        <div class="container">
-            <form action="../../form-result.php" method="post" target="_blank">
-                <input type="text" name="bus"><br>
-                <button> Buscar </button>
-            </form>
-        </div>
+        <input type="search" name="buscar" id="input">
+        <button name="button" onclick="app.getCinemaByName($('#input').val())">Buscar</button>
+        <table id ="cinema" class="table">
+            <tr>
+                <th>Cinema</th>
+                <th>Funcion</th>
+                <th>Sillas</th>
+                <th>Fecha</th>
+            </tr>
+        </table>
     </body>
 </html>
