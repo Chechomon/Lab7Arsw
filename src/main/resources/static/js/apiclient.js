@@ -1,4 +1,4 @@
-apiclient = (function() {
+apiclient=(function(){
 
 	return {
 		getCinemaByName : function(name, callback) {
