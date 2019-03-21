@@ -47,6 +47,7 @@ public class CinemaServices {
      * @param name cinemas name
      * @return the cinema of the given name created by the given author
      * @throws CinemaException
+     * @throws CinemaPersistenceException
      */
     public Cinema getCinemaByName(String name) throws CinemaException, CinemaPersistenceException {
         return cps.getCinema(name);

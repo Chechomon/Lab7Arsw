@@ -12,6 +12,7 @@ and open the template in the editor.
         <script src="/webjars/jquery/jquery.min.js"></script>
         <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="js/apimock.js"></script>
+        <script src="js/apiclient.js"></script>
         <script src="js/app.js"></script>
         <link rel="stylesheet"
               href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -19,8 +20,8 @@ and open the template in the editor.
     <body>
         <input type="search" name="buscar" id="input">
         <button name="button" onclick="app.getCinemaByName($('#input').val())">Buscar</button>
-        <table id ="cinema" class="table">
-            <tr>
+        <table id ="tabla" class="table">
+            <tr style="background: black">
                 <th>Cinema</th>
                 <th>Funcion</th>
                 <th>Sillas</th>

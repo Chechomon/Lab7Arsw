@@ -41,9 +41,10 @@ public class CinemaAPIController {
     }
     
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
-    public ResponseEntity<?> getFunctionsbyCinema(@PathVariable String name){
+    public ResponseEntity<?> getCinemaByName(@PathVariable String name){
         try {
-            return new ResponseEntity<>(cinemaServices.getFunctionsbyCinema(name), HttpStatus.ACCEPTED);
+            System.out.println(cinemaServices.getCinemaByName(name));
+            return new ResponseEntity<>(cinemaServices.getCinemaByName(name), HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             Logger.getLogger(edu.eci.arsw.cinema.controllers.CinemaAPIController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("Cine no encontrado ",HttpStatus.NOT_FOUND);
